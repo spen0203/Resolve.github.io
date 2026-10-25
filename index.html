@@ -3,60 +3,57 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Resolve privacy policy</title>
+<title>Sample Gallery: demo page for Resolve</title>
+<meta property="og:image" content="images/hero.jpg">
 <style>
-  :root { color-scheme: light dark; --bg:#fff; --ink:#12161c; --mut:#5d6675; --line:#dfe2e8; --acc:#0a7c76; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#14171c; --ink:#eceff4; --mut:#9ba5b5; --line:#2c323c; --acc:#45d0c4; } }
-  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; }
-  main { max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; }
-  h1 { font-size: 30px; letter-spacing: -.01em; margin: 0 0 4px; }
-  h2 { font-size: 18px; margin: 34px 0 6px; }
-  .meta { color: var(--mut); margin: 0 0 28px; }
-  p, li { margin: 8px 0; }
-  a { color: var(--acc); }
-  .summary { border: 1px solid var(--line); border-radius: 12px; padding: 4px 18px; }
-  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--mut); font-size: 14px; }
+  :root { --ink:#1e242c; --mut:#667085; --line:#e3e6eb; --bg:#f6f7f9; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  header, footer { background:#fff; border-bottom:1px solid var(--line); }
+  footer { border-top:1px solid var(--line); border-bottom:0; margin-top:32px; }
+  .bar { max-width:1100px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; gap:20px; }
+  nav { margin-left:auto; display:flex; gap:18px; color:var(--mut); }
+  .hero { max-width:1100px; margin:24px auto 0; padding:0 20px; }
+  .hero img { width:100%; height:300px; object-fit:cover; border-radius:14px; display:block; }
+  h1 { font-size:28px; margin:22px 20px 4px; max-width:1060px; margin-inline:auto; padding:0 20px; }
+  .sub { color:var(--mut); max-width:1100px; margin:0 auto 18px; padding:0 20px; }
+  .grid { max-width:1100px; margin:0 auto; padding:0 20px; display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:16px; }
+  .card { margin:0; background:#fff; border:1px solid var(--line); border-radius:12px; overflow:hidden; }
+  .card img { width:100%; height:200px; object-fit:cover; display:block; }
+  .card figcaption { padding:10px 12px; font-size:14px; color:var(--mut); }
+  #more { text-align:center; color:var(--mut); padding:28px 0 0; }
+  .icons { display:flex; gap:10px; margin-left:auto; }
+  .note { font-size:13px; color:var(--mut); }
 </style>
 </head>
 <body>
-<main>
-  <h1>Resolve privacy policy</h1>
-  <p class="meta">Applies to the Resolve browser extension (&ldquo;Resolve: Gallery &amp; Full-Size Image Downloader&rdquo;). Last updated: October 24, 2026.</p>
-
-  <div class="summary">
-    <p><strong>In short:</strong> Resolve does not collect, transmit, sell or share your personal data. It has no accounts, no analytics and no advertising. It works entirely inside your browser.</p>
-  </div>
-
-  <h2>What Resolve does</h2>
-  <p>When you open Resolve on a web page, it looks for the images on that page, checks whether larger versions exist, and lets you save the ones you choose. It only runs when you open it, and only in the tab you are scanning.</p>
-
-  <h2>Data stored on your device</h2>
-  <p>Resolve stores the following in your browser&rsquo;s extension storage. It never leaves your device through Resolve.</p>
-  <ul>
-    <li>Your settings, such as size filters, file-name template and the Live monitoring preference.</li>
-    <li>Your ignore rules, for example images or sites you chose to hide.</li>
-    <li>A temporary cache of image check results (image addresses, dimensions, file sizes and content fingerprints) so revisiting a page is faster. Entries expire after about 24 hours, and you can clear them by removing the extension&rsquo;s data in your browser.</li>
-  </ul>
-
-  <h2>Network requests</h2>
-  <p>To find and save the largest version of an image, Resolve requests image files from the websites that host them. These requests are made directly by your browser, in the same way as if you had opened the image yourself, and may include your normal cookies for that site. For sites that block hotlinking, Resolve adds the address of the page you are on as the Referer header on these requests. Resolve makes no requests to any server operated by its developer.</p>
-
-  <h2>Page content</h2>
-  <p>Resolve reads the page you are scanning to list its images (for example image addresses, alt text and sizes). This information is used only on your device to show you the results and is not stored beyond the cache described above or sent anywhere.</p>
-
-  <h2>Permissions</h2>
-  <p>Resolve asks for access to all websites because images are hosted on many different domains that cannot be known in advance. It uses this access only to read the page you are scanning and to fetch the images you are viewing. It does not use it to track you.</p>
-
-  <h2>Third parties</h2>
-  <p>Resolve does not include third-party analytics, advertising or tracking code. If the extension shows a link to a donation page (Ko-fi), that link opens a separate website operated by a third party, which has its own privacy policy. Resolve does not send it any information.</p>
-
-  <h2>Your responsibility for saved images</h2>
-  <p>Images you save may be protected by copyright or website terms. Please only save images you have the right to use.</p>
-
-  <h2>Changes</h2>
-  <p>If this policy changes, for example if optional paid features are added that need a license check, this page will be updated and the date above will change.</p>
-
-  <footer>Contact: <a href="mailto:YOUR-SUPPORT-EMAIL@example.com">YOUR-SUPPORT-EMAIL@example.com</a></footer>
-</main>
+<header><div class="bar"><img src="images/logo.png" alt="Sample Gallery logo" width="180" height="48"><nav><span>Collections</span><span>About</span><span>Contact</span></nav></div></header>
+<div class="hero"><img src="images/hero.jpg" alt="Panorama"></div>
+<h1>Landscapes</h1>
+<p class="sub">Scroll to load more. Thumbnails here are small; the originals are much larger.</p>
+<main class="grid" id="grid"><figure class="card"><img src="images/img-01-360x240.jpg" alt="Alpine morning" loading="lazy"><figcaption>Alpine morning</figcaption></figure><figure class="card"><a href="images/img-02.jpg"><img src="images/img-02-360x240.jpg" alt="Quiet coast" loading="lazy"></a><figcaption>Quiet coast</figcaption></figure><figure class="card"><img src="images/img-03-360x240.jpg" data-full="images/img-03.jpg" alt="Desert light" loading="lazy"><figcaption>Desert light</figcaption></figure><figure class="card"><img src="images/img-04-360x240.jpg" alt="Pine ridge" loading="lazy"><figcaption>Pine ridge</figcaption></figure><figure class="card"><a href="images/img-05.jpg"><img src="images/img-05-240x360.jpg" alt="Night harbour" loading="lazy"></a><figcaption>Night harbour</figcaption></figure><figure class="card"><img src="images/img-06-360x240.jpg" data-full="images/img-06.jpg" alt="Golden valley" loading="lazy"><figcaption>Golden valley</figcaption></figure><figure class="card"><img src="images/img-07-360x240.jpg" alt="Low tide" loading="lazy"><figcaption>Low tide</figcaption></figure><figure class="card"><a href="images/img-08.jpg"><img src="images/img-08-360x240.jpg" alt="First snow" loading="lazy"></a><figcaption>First snow</figcaption></figure><figure class="card"><img src="images/img-09-360x240.jpg" data-full="images/img-09.jpg" alt="Canyon hour" loading="lazy"><figcaption>Canyon hour</figcaption></figure></main>
+<div id="more">Loading more&hellip;</div>
+<footer><div class="bar"><span class="note">Demo page for testing the Resolve extension. All images are generated artwork.</span>
+<span class="icons"><img src="images/icon-mail.png" alt="" width="24" height="24"><img src="images/icon-share.png" alt="" width="24" height="24"><img src="images/icon-rss.png" alt="" width="24" height="24"></span></div></footer>
+<script>
+  const MORE = ["<figure class=\"card\"><img src=\"images/img-10-240x360.jpg\" alt=\"Still water\" loading=\"lazy\"><figcaption>Still water</figcaption></figure>", "<figure class=\"card\"><a href=\"images/img-11.jpg\"><img src=\"images/img-11-360x240.jpg\" alt=\"Dune ridge\" loading=\"lazy\"></a><figcaption>Dune ridge</figcaption></figure>", "<figure class=\"card\"><img src=\"images/img-12-360x240.jpg\" data-full=\"images/img-12.jpg\" alt=\"Fog line\" loading=\"lazy\"><figcaption>Fog line</figcaption></figure>", "<figure class=\"card\"><img src=\"images/img-13-360x240.jpg\" alt=\"Blue hour\" loading=\"lazy\"><figcaption>Blue hour</figcaption></figure>", "<figure class=\"card\"><a href=\"images/img-14.jpg\"><img src=\"images/img-14-360x240.jpg\" alt=\"Hill country\" loading=\"lazy\"></a><figcaption>Hill country</figcaption></figure>", "<figure class=\"card\"><img src=\"images/img-15-240x360.jpg\" data-full=\"images/img-15.jpg\" alt=\"Salt flats\" loading=\"lazy\"><figcaption>Salt flats</figcaption></figure>", "<figure class=\"card\"><img src=\"images/img-16-360x240.jpg\" alt=\"Autumn pass\" loading=\"lazy\"><figcaption>Autumn pass</figcaption></figure>", "<figure class=\"card\"><a href=\"images/img-17.jpg\"><img src=\"images/img-17-360x240.jpg\" alt=\"Far shore\" loading=\"lazy\"></a><figcaption>Far shore</figcaption></figure>", "<figure class=\"card\"><img src=\"images/img-18-360x240.jpg\" data-full=\"images/img-18.jpg\" alt=\"Summit haze\" loading=\"lazy\"><figcaption>Summit haze</figcaption></figure>", "<figure class=\"card\"><img src=\"images/img-19-360x240.jpg\" alt=\"Red mesa\" loading=\"lazy\"><figcaption>Red mesa</figcaption></figure>", "<figure class=\"card\"><a href=\"images/img-20.jpg\"><img src=\"images/img-20-240x360.jpg\" alt=\"Lake dusk\" loading=\"lazy\"></a><figcaption>Lake dusk</figcaption></figure>", "<figure class=\"card\"><img src=\"images/img-21-360x240.jpg\" data-full=\"images/img-21.jpg\" alt=\"Open plain\" loading=\"lazy\"><figcaption>Open plain</figcaption></figure>", "<figure class=\"card\"><img src=\"images/img-22-360x240.jpg\" alt=\"Cloud break\" loading=\"lazy\"><figcaption>Cloud break</figcaption></figure>", "<figure class=\"card\"><a href=\"images/img-23.jpg\"><img src=\"images/img-23-360x240.jpg\" alt=\"Stone beach\" loading=\"lazy\"></a><figcaption>Stone beach</figcaption></figure>", "<figure class=\"card\"><img src=\"images/img-24-360x240.jpg\" data-full=\"images/img-24.jpg\" alt=\"Winter field\" loading=\"lazy\"><figcaption>Winter field</figcaption></figure>", "<figure class=\"card\"><img src=\"images/img-25-240x360.jpg\" alt=\"Moss valley\" loading=\"lazy\"><figcaption>Moss valley</figcaption></figure>", "<figure class=\"card\"><a href=\"images/img-26.jpg\"><img src=\"images/img-26-360x240.jpg\" alt=\"Sun rise\" loading=\"lazy\"></a><figcaption>Sun rise</figcaption></figure>", "<figure class=\"card\"><img src=\"images/img-27-360x240.jpg\" data-full=\"images/img-27.jpg\" alt=\"Rain edge\" loading=\"lazy\"><figcaption>Rain edge</figcaption></figure>", "<figure class=\"card\"><img src=\"images/img-28-360x240.jpg\" alt=\"Glass bay\" loading=\"lazy\"><figcaption>Glass bay</figcaption></figure>", "<figure class=\"card\"><a href=\"images/img-29.jpg\"><img src=\"images/img-29-360x240.jpg\" alt=\"High pasture\" loading=\"lazy\"></a><figcaption>High pasture</figcaption></figure>", "<figure class=\"card\"><img src=\"images/img-30-240x360.jpg\" data-full=\"images/img-30.jpg\" alt=\"Last light\" loading=\"lazy\"><figcaption>Last light</figcaption></figure>"];
+  const grid = document.getElementById('grid'), tail = document.getElementById('more');
+  let next = 0, busy = false;
+  // Plain scroll check (works on any static host): load while the "Loading more" line is near the bottom of the window.
+  function nearBottom() { return tail.getBoundingClientRect().top < window.innerHeight + 150; }
+  function check() { if (next < MORE.length && nearBottom()) load(); }
+  function load() {
+    if (busy || next >= MORE.length) return;
+    busy = true;
+    setTimeout(() => {
+      grid.insertAdjacentHTML('beforeend', MORE.slice(next, next + 3).join(''));
+      next += 3; busy = false;
+      if (next >= MORE.length) tail.textContent = 'That is everything.'; else check();
+    }, 450);
+  }
+  addEventListener('scroll', check, { passive: true });
+  addEventListener('resize', check);
+  check();
+</script>
 </body>
 </html>
